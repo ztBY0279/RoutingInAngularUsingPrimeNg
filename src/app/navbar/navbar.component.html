@@ -34,6 +34,7 @@
         </ng-template>
         <ng-template pTemplate="item" let-item let-root="root">
             <a pRipple class="flex align-items-center p-menuitem-link" [routerLink]="item.routerLink">
+                <!-- here [routerLink] = "item.routerLink" is need to be added in order to work with routing using prime ng -->
                 <span [class]="item.icon"></span>
                 <span class="ml-2">{{ item.label }}</span>
                 <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge" />
